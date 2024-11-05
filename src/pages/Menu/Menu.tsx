@@ -1,9 +1,36 @@
+import { useEffect, useState } from "react";
 import Headling from "../../components/Headling/Headling"
-import ProductCard from "../../components/ProductCard/ProductCard";
 import Search from "../../components/Search/Search"
+import { API } from "../../helpers/API";
+import { Product } from "../../interfaces/product.interface";
 import styles from "./Menu.module.css";
+import axios, { AxiosError } from "axios";
+import { MenuList } from "./MenuList/MenuList";
 
 export const Menu = () => {
+    const [products, setProducts] = useState<Product[]>([]);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [error, setError] = useState<string | undefined>();
+    
+    const getMenu = async () => {
+        try {
+            setIsLoading(true);
+            const { data } = await axios.get<Product[]>(`${API}`)
+            setProducts(data);
+            setIsLoading(false);
+        } catch (error) {
+            setIsLoading(false);
+            if(error instanceof AxiosError) {
+                setError(error.message)
+            }
+            return console.error(error);
+        }
+    };
+
+    useEffect(() => {
+        getMenu();
+    }, [])
+
     return (
         <>
             <div className={styles["head"]}>
@@ -11,15 +38,9 @@ export const Menu = () => {
                 <Search placeholder="Введите блюдо или состав"/>
             </div>
             <div>
-                <ProductCard 
-                    id={1}
-                    title={"Наслаждение"}
-                    description={"Вкусно"}
-                    rating={4.5}
-                    price={300}
-                    image="/public/pizza.jpg"
-                />
-                  
+                {error && <>{error}</>}
+                {!isLoading && <MenuList products={products} />}
+                {isLoading && <>Загрузка...</>}
             </div>
         </>
     )
