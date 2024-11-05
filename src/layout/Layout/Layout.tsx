@@ -10,7 +10,8 @@ export const Layout = () => {
             <div className={styles["sideBar"]}>
                 <div className={styles["user"]}>
                     <img className={styles["avatar"]} src="/public/avatar.png" alt="avatar" />
-                    <div className={styles["name"]}>Жалгасов Мерей</div>
+                    <div className={styles["name"]}>Жалгасов</div>
+                    <div className={styles["name"]}>Мерей</div>
                     <div className={styles["email"]}>mereyzhalgassov@mail.ru</div>
                 </div>
                 <div className={styles["menu"]}>
@@ -28,7 +29,7 @@ export const Layout = () => {
                     Выход
                 </Button>
             </div>
-            <div>
+            <div className={styles["content"]}>
                 <Outlet />
             </div>
         </div>

@@ -1,7 +1,9 @@
+import Headling from "../../components/Headling/Headling"
+
 export const Cart = () => {
     return (
         <>
-            Cart
+            <Headling>Корзина</Headling>
         </>
     )
 }

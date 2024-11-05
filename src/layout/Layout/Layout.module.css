@@ -77,3 +77,8 @@
     line-height: normal;
     color: var(--text-secondary-color);
 }
+
+.content {
+    padding: 60px;
+    width: 100%;
+}
