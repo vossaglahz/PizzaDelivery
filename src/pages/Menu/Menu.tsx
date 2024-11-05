@@ -9,18 +9,14 @@ import { MenuList } from "./MenuList/MenuList";
 
 export const Menu = () => {
     const [products, setProducts] = useState<Product[]>([]);
-    const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | undefined>();
     const [filter, setFilter] = useState<string>("");
     
     const getMenu = async () => {
         try {
-            setIsLoading(true);
             const { data } = await axios.get<Product[]>(`${API}`)
             setProducts(data);
-            setIsLoading(false);
         } catch (error) {
-            setIsLoading(false);
             if(error instanceof AxiosError) {
                 setError(error.message)
             }
