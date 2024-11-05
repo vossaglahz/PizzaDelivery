@@ -4,7 +4,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Cart } from './pages/Cart/Cart.tsx'
 import { NotFound } from './pages/NotFound/NotFound.tsx'
-import { Layout } from './layout/Menu/Menu.tsx'
+import { Layout } from './layout/Layout/Layout.tsx'
 import { Menu } from './pages/Menu/Menu.tsx'
 
 const router = createBrowserRouter([
