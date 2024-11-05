@@ -1,0 +1,135 @@
+.cart-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.count {
+    color: var(--text-color);
+    padding: 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.price {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+
+.item {
+    margin-top: 40px;
+    width: 350px;
+    height: 82px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image {
+    width: 82px;
+    height: 82px;
+    border-radius: 20px;
+    margin-right: 10px;
+    box-shadow: 0px 15px 36px rgb(214 97 1 / 26%)
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.add-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.add-control {
+    top: 15px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    border: none;
+    cursor: pointer;
+    color: var(--white-color);
+    box-shadow: 2px 6px 36px rgb(214 97 1 / 27%);
+    margin: 0 5px;
+}
+
+.add-control:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.inactive {
+    background-color: #fe734c6e;
+}
+
+.cartWrapper {
+    display: flex;
+}
+
+.itemsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.total {
+    margin: 40px 0px 0px 100px;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    width: 200px;
+    border-bottom: 1px solid var(--separator-color);
+}
+
+.itemName {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.itemPrice {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 26px;
+}
+
+.currencySymbol {
+    color: var(--text-secondary-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.payButton {
+    margin-top: 40px;
+}
+
+.delete-button {
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.delete-button:hover {
+    color: var(--primary-hover-color);
+}

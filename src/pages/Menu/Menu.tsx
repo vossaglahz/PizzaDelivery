@@ -40,8 +40,7 @@ export const Menu = () => {
             </div>
             <div>
                 {error && <>{error}</>}
-                {!isLoading && <MenuList products={products} filter={filter} />}
-                {isLoading && <>Loading...</>}
+                <MenuList products={products} filter={filter}/>
             </div>
         </>
     )

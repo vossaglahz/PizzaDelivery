@@ -11,7 +11,7 @@ export const MenuList = ({ products, filter }: MenuListProps) => {
                     <ProductCard 
                         key={p.id}
                         id={p.id}
-                        title={p.name}
+                        name={p.name}
                         description={p.topping ? p.topping.join(", ") : ""}
                         rating={p.rank || 0}
                         price={p.price}
