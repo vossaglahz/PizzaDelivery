@@ -10,23 +10,23 @@ export const Layout = () => {
             <div className={styles["sideBar"]}>
                 <div className={styles["user"]}>
                     <img className={styles["avatar"]} src="/public/avatar.png" alt="avatar" />
-                    <div className={styles["name"]}>Жалгасов</div>
-                    <div className={styles["name"]}>Мерей</div>
-                    <div className={styles["email"]}>mereyzhalgassov@mail.ru</div>
+                    <div className={styles["name"]}>Zhalgassov</div>
+                    <div className={styles["name"]}>Merey</div>
+                    <div className={styles["email"]}>crowtwentyohtwo@gmail.com</div>
                 </div>
                 <div className={styles["menu"]}>
                     <NavLink to='/' className={({ isActive }) => cn(styles["link"], {
                         [styles.active]: isActive
                     })}>
-                    <img className={styles["icon"]} src="/public/menu.svg" alt="menu" />Меню</NavLink>
+                    <img className={styles["icon"]} src="/public/menu.svg" alt="menu" />Menu</NavLink>
                     <NavLink className={({ isActive }) => cn(styles["link"], {
                         [styles.active]: isActive
                     })} to='/cart'>
-                    <img className={styles["icon"]}src="/public/cart.svg" alt="cart"/>Корзина</NavLink>
+                    <img className={styles["icon"]}src="/public/cart.svg" alt="cart"/>Cart</NavLink>
                 </div>
                 <Button className={styles["exit"]}>
                     <img className={styles["icon"]} src="/public/exit.svg" alt="exit" />
-                    Выход
+                    Log out
                 </Button>
             </div>
             <div className={styles["content"]}>

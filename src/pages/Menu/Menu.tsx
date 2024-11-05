@@ -11,6 +11,7 @@ export const Menu = () => {
     const [products, setProducts] = useState<Product[]>([]);
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | undefined>();
+    const [filter, setFilter] = useState<string>("");
     
     const getMenu = async () => {
         try {
@@ -34,13 +35,13 @@ export const Menu = () => {
     return (
         <>
             <div className={styles["head"]}>
-                <Headling>Меню</Headling>
-                <Search placeholder="Введите блюдо или состав"/>
+                <Headling>Menu</Headling>
+                <Search onChange={(e => setFilter(e.target.value))} placeholder="Write name of food"/>
             </div>
             <div>
                 {error && <>{error}</>}
-                {!isLoading && <MenuList products={products} />}
-                {isLoading && <>Загрузка...</>}
+                {!isLoading && <MenuList products={products} filter={filter} />}
+                {isLoading && <>Loading...</>}
             </div>
         </>
     )
