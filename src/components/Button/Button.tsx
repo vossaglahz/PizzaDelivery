@@ -1,10 +1,10 @@
 import { ButtonProps } from "./Button.props";
 import cn from 'classnames';
-import './Button.module.scss';
+import styles from './Button.module.css';
 
 const Button = ({ children, className, ...props }: ButtonProps) => {
     return (
-        <button className={cn("button accent", className)} {...props}>{children}</button>
+        <button className={cn(styles['button'], styles['accent'], className)} {...props}>{children}</button>
     );
 };
 
