@@ -97,7 +97,7 @@ const CardItem = () => {
                         Оплатить
                     </Button>
                 </div>
-            ) :  <img className={styles["NotingImage"]} src={'/public/empty-box.png'} alt="Noting" /> }
+            ) :  <img className={styles["NotingImage"]} src={'./public/empty-box.png'} alt="Noting" /> }
         </div>
     );
 }

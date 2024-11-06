@@ -3,6 +3,10 @@
     height: 20px;
 }
 
+.NotingImage {
+    max-width: 100%;
+}
+
 .count {
     color: var(--text-color);
     padding: 10px;

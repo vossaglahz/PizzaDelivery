@@ -1,7 +1,7 @@
 import ProductCard from "../../../components/ProductCard/ProductCard";
 import { MenuListProps } from "./MenuList.props";
 import styles from "./MenuList.module.css";
-import { images } from "../../../helpers/images";
+import { images } from "../../../helpers/images.ts";
 
 export const MenuList = ({ products, filter }: MenuListProps) => {
 

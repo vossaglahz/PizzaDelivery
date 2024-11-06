@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import { API } from "../../helpers/API";
 import { Product } from "../../interfaces/product.interface";
-import { images } from "../../helpers/images";
+import { images } from "../../helpers/images.ts";
 import ProductDetails from "../../components/ProductDetails/ProductDetails";
 
 export const ProductItem = () => {

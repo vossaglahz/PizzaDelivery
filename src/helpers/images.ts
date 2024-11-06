@@ -1,9 +1,9 @@
 export const images = [
-    "/public/pizza1.png",
-    "/public/pizza2.png",
-    "/public/pizza3.png",
-    "/public/coca.png",
-    "/public/loka.png",
-    "/public/pizza4.png",
-    "/public/brod.png",
+    "/pizza1.png",
+    "/pizza2.png",
+    "/pizza3.png",
+    "/coca.png",
+    "/loka.png",
+    "/pizza4.png",
+    "/brod.png",
 ];
