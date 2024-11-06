@@ -46,11 +46,11 @@ const ProductCard = (props: ProductCardProps) => {
                             add(props.id ,props.name, props.price, props.image);
                         }}
                     >
-                        <img className={styles['cart-icon']} src="./public/cartButton.svg" alt="cartButton" />
+                        <img className={styles['cart-icon']} src="/cartButton.svg" alt="cartButton" />
                     </button>
                     <div className={styles["rating"]}>
                         {props.rating}&nbsp;
-                        <img className={styles['star-icon']} src="./public/star.svg" alt="star" />
+                        <img className={styles['star-icon']} src="/star.svg" alt="star" />
                     </div>
                 </div>
                 <div className={styles["footer"]}>

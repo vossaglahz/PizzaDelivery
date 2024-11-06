@@ -17,14 +17,14 @@ export const Layout = () => {
                     <NavLink to='/' className={({ isActive }) => cn(styles["link"], {
                         [styles.active]: isActive
                     })}>
-                    <img className={styles["icon"]} src="./public/menu.svg" alt="menu" />Menu</NavLink>
+                    <img className={styles["icon"]} src="/menu.svg" alt="menu" />Menu</NavLink>
                     <NavLink className={({ isActive }) => cn(styles["link"], {
                         [styles.active]: isActive
                     })} to='/cart'>
-                    <img className={styles["icon"]}src="./public/cart.svg" alt="cart"/>Cart</NavLink>
+                    <img className={styles["icon"]}src="/cart.svg" alt="cart"/>Cart</NavLink>
                 </div>
                 <Button className={styles["exit"]}>
-                    <img className={styles["icon"]} src="./public/exit.svg" alt="exit" />
+                    <img className={styles["icon"]} src="/exit.svg" alt="exit" />
                     Log out
                 </Button>
             </div>

@@ -16,7 +16,7 @@ const ProductDetails = (props: ProductCardProps) => {
                     </div>
                     <div className={styles["rating"]}>
                         {props.rating}&nbsp;
-                        <img className={styles['star-icon']} src="./public/star.svg" alt="star" />
+                        <img className={styles['star-icon']} src="/star.svg" alt="star" />
                     </div>
                     <div className={styles["description"]}>
                         <p className={styles["descriptionName"]}>Состав:</p>
