@@ -46,7 +46,7 @@ const ProductCard = (props: ProductCardProps) => {
                             add(props.id ,props.name, props.price, props.image);
                         }}
                     >
-                        <img className={styles['cart-icon']} src="/public/cart.svg" alt="cart" />
+                        <img className={styles['cart-icon']} src="/public/cartButton.svg" alt="cartButton" />
                     </button>
                     <div className={styles["rating"]}>
                         {props.rating}&nbsp;

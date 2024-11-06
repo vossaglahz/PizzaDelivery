@@ -6,7 +6,8 @@ import { Cart } from './pages/Cart/Cart.tsx'
 import { NotFound } from './pages/NotFound/NotFound.tsx'
 import { Layout } from './layout/Layout/Layout.tsx'
 import { Menu } from './pages/Menu/Menu.tsx'
-import { Product } from './pages/Product/Product.tsx'
+import { ProductItem } from './pages/Product/Product.tsx'
+import Success from './components/Success/Success.tsx'
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/product/:id",
-        element: <Product />,
+        element: <ProductItem />,
+      },
+      {
+        path: "/success",
+        element: <Success />,
       }
     ]
   },

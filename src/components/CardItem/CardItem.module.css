@@ -26,7 +26,7 @@
 
 .item {
     margin-top: 40px;
-    width: 350px;
+    width: 500px;
     height: 82px;
 }
 
@@ -37,8 +37,8 @@
 }
 
 .image {
-    width: 82px;
-    height: 82px;
+    width: 40%;
+    height: 40%;
     border-radius: 20px;
     margin-right: 10px;
     box-shadow: 0px 15px 36px rgb(214 97 1 / 26%)

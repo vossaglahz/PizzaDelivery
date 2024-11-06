@@ -2,9 +2,11 @@ import styles from "./CardItem.module.css";
 import { useEffect, useState } from "react";
 import cn from "classnames";
 import Button from "../Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const CardItem = () => {
     const [cards, setCards] = useState<{ id: number; name: string; price: number; image: string; count: number }[]>([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const data = localStorage.getItem("items");
@@ -38,6 +40,11 @@ const CardItem = () => {
         setCards((prevCards) => prevCards.filter((card) => card.id !== id));
         const updatedCards = cards.filter((card) => card.id !== id);
         localStorage.setItem("items", JSON.stringify(updatedCards));
+    };
+
+    const handleSuccess = () => {
+        navigate("/success");
+        localStorage.removeItem("items");
     };
 
     const totalPrices = cards.reduce((total, card) => total + card.price * card.count, 0);
@@ -86,7 +93,7 @@ const CardItem = () => {
                         <span className={styles["itemName"]}>Итого:</span>
                         <span className={styles["itemPrice"]}>{grandTotal} <span className={styles["currencySymbol"]}>₸</span></span>
                     </div>
-                    <Button className={styles["payButton"]} appearance="big">
+                    <Button onClick={handleSuccess} className={styles["payButton"]} appearance="big">
                         Оплатить
                     </Button>
                 </div>
