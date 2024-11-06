@@ -30,7 +30,7 @@ export const ProductItem = () => {
         <div>
             {products
                 .filter(p => p.id.toString().includes(id || ""))
-                .map((p, index) => (
+                .map((p) => (
                     <ProductDetails 
                         key={p.id}
                         id={p.id}
@@ -38,7 +38,7 @@ export const ProductItem = () => {
                         description={p.topping ? p.topping.join(", ") : ""}
                         rating={p.rank || 0}
                         price={p.price}
-                        image={images[index % images.length]}
+                        image={images[p.id - 1]}
                     />
                 ))
             }

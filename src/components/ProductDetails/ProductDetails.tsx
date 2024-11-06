@@ -18,14 +18,16 @@ const ProductDetails = (props: ProductCardProps) => {
                         {props.rating}&nbsp;
                         <img className={styles['star-icon']} src="/star.svg" alt="star" />
                     </div>
-                    <div className={styles["description"]}>
-                        <p className={styles["descriptionName"]}>Состав:</p>
-                        <ul className={styles["ingredients-list"]}>
-                            {props.description.split(",").map((ingredient, index) => (
-                                <li key={index}>{ingredient}</li>
-                            ))}
-                        </ul>
-                    </div>
+                    {props.description.length > 0 &&
+                        <div className={styles["description"]}>
+                            <p className={styles["descriptionName"]}>Состав:</p>
+                                <ul className={styles["ingredients-list"]}>
+                                    {props.description.split(",").map((ingredient, index) => (
+                                        <li key={index}>{ingredient}</li>
+                                    ))}
+                                </ul>
+                        </div>
+                    }
                 </div>
             </div>
         </div>

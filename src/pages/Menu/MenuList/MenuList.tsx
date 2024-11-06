@@ -9,7 +9,7 @@ export const MenuList = ({ products, filter }: MenuListProps) => {
         <div className={styles.wrapper}>
             {products
                 .filter(p => p.name.includes(filter))
-                .map((p, index) => (
+                .map((p) => (
                     <ProductCard 
                         key={p.id}
                         id={p.id}
@@ -17,7 +17,7 @@ export const MenuList = ({ products, filter }: MenuListProps) => {
                         description={p.topping ? p.topping.join(", ") : ""}
                         rating={p.rank || 0}
                         price={p.price}
-                        image={images[index % images.length]}
+                        image={images[p.id - 1]}
                     />
                 ))
             }
